@@ -3,9 +3,9 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('manar-dockerhub')
-		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-  		AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+		DOCKERHUB_CREDENTIALS=credentials('manar-dockerhub-token')
+		AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
+  		AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
 		AWS_S3_BUCKET = 'manar-belt2-artifacts-123456'
 		AWS_EB_APP_NAME = 'RUNaWAY-cicd'
